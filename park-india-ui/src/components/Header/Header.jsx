@@ -8,23 +8,23 @@ import logo from '../../assets/CarLogo.jpg';
 
 const Header = () => {
   return (
-    <div className="head">
+    <div className="flex justify-between items-center shadow-xl shadow-gray-400 px-5 py-2">
       
-      <div className="logo">
+      <div className="flex items-center gap-3">
       <img src={logo} alt="Park India Logo" width="80" height="60"  />  
-      <h2>Park India</h2>
+      <h2 className='text-2xl font-bold'>Park India</h2>
       </div>
-      <div className="nav-menu">
-        <Link to="/home">Home</Link>
-        <Link to="/slot">Available Slot</Link>
-        <Link to="/plans">Plans</Link>
-        <Link to="/contact">Contact us</Link>
-        <Link to="/about">About</Link>
+      <div className="flex justify-between items-center gap-10 text-2xl font-bold  ">
+        <Link to="/home" className='hover:scale-110 transition-all'>Home</Link>
+        <Link to="/slot" className='hover:scale-110 transition-all'>Available Slot</Link>
+        <Link to="/plans" className='hover:scale-110 transition-all'>Plans</Link>
+        <Link to="/contact" className='hover:scale-110 transition-all'>Contact us</Link>
+        <Link to="/about" className='hover:scale-110 transition-all'>About</Link>
 
       </div>
-      <div className="login">
+      <div className="flex  justify-center items-center">
         
-        <Link to="/login">Login</Link>
+        <Link to="/login" className=' bg-[#6278d2] text-white hover:bg-[#3B5BDB] hover:scale-110 text-xl font-bold rounded-xl px-5 py-2 transition-all'>Login</Link>
       </div>
 
     </div>
