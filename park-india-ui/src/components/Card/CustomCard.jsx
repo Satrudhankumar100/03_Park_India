@@ -7,6 +7,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './CustomCard.css';
 import biharImg from '../../assets/golghar.png';
+import { Box, Link } from '@mui/material';
+import { IoStarHalf } from "react-icons/io5";
 
 const CustomCard = () => {
   const [states,setStates]=useState(['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
@@ -25,18 +27,40 @@ const CustomCard = () => {
         image={biharImg}
       />
       <CardContent>
+      <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
+        <Box>
         <Typography gutterBottom variant="h4" component="div">
           {states[3]}
         </Typography>
-      
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          <p>Available District 40</p>
-          <p>Review 4 </p>
-          <p>slot 2000</p>
+        </Box>
+        <Box>
+        <Typography gutterBottom sx={{fontWeight:"bold"}} variant="h6" component="div">
+          Price Rs 1999/-
         </Typography>
+        </Box>
+      </Box>
+        
+        <Box>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            Available District 40
+          </Typography>
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+           
+          <span className='flex'> Review 4 <IoStarHalf /></span>
+          </Typography>
+
+          <Typography variant="body2" sx={{ color: "#3b8132", fontWeight:"bold" }}>
+             slots : 2000
+
+          </Typography>
+
+        </Box>
+      
+       
       </CardContent>
-      <CardActions>
-        <Button   size="small">Buy Now</Button>
+      <CardActions sx={{display:"flex",justifyContent:"end"
+}}>
+        <Button  sx={{fontWeight:"bold",fontSize:"25px"}}  size="small">Book Now</Button>
       </CardActions>
     </Card>
   );
