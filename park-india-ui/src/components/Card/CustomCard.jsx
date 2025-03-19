@@ -10,31 +10,25 @@ import biharImg from '../../assets/golghar.png';
 import { Box, Link } from '@mui/material';
 import { IoStarHalf } from "react-icons/io5";
 
-const CustomCard = () => {
-  const [states,setStates]=useState(['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
-      'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand',
-      'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur',
-      'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan',
-      'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh',
-      'Uttarakhand', 'West Bengal'])
-
+const CustomCard = ({landmark}) => {
+  
   return (
-    <Card className="custom-card" sx={{ maxWidth: 345 }}>
+    <Card className="custom-card" sx={{ maxWidth: 300 }}>
       <CardMedia
         component="img"
         alt="green iguana"
         height="200"
-        image={biharImg}
+        image={landmark.image}
       />
       <CardContent>
       <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
         <Box>
-        <Typography gutterBottom variant="h4" component="div">
-          {states[3]}
+        <Typography gutterBottom variant="h6" component="div">
+          {landmark.state}
         </Typography>
         </Box>
         <Box>
-        <Typography gutterBottom sx={{fontWeight:"bold"}} variant="h6" component="div">
+        <Typography gutterBottom sx={{fontWeight:"bold"}} variant="h7" component="div">
           Price Rs 1999/-
         </Typography>
         </Box>
@@ -42,15 +36,15 @@ const CustomCard = () => {
         
         <Box>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Available District 40
+            Available District : {landmark.availableDistrict}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
            
-          <span className='flex items-center gap-1'> Review 4 <IoStarHalf color="#f82" /></span>
+          <span className='flex items-center gap-1'> Review : {landmark.review} <IoStarHalf color="#f82" /></span>
           </Typography>
 
           <Typography variant="body2" sx={{ color: "#3b8132", fontWeight:"bold" }}>
-             slots : 2000
+             slots : {landmark.slots}
 
           </Typography>
 
