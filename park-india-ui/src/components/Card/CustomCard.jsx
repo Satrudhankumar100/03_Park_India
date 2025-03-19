@@ -46,7 +46,7 @@ const CustomCard = () => {
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
            
-          <span className='flex'> Review 4 <IoStarHalf /></span>
+          <span className='flex items-center gap-1'> Review 4 <IoStarHalf color="#f82" /></span>
           </Typography>
 
           <Typography variant="body2" sx={{ color: "#3b8132", fontWeight:"bold" }}>
