@@ -15,7 +15,7 @@ const Header = () => {
       <h2 className='text-2xl font-bold'>Park India</h2>
       </div>
       <div className="flex justify-between items-center gap-10 text-2xl font-bold  ">
-        <Link to="/home" className='hover:scale-110 transition-all'>Home</Link>
+        <Link to="/" className='hover:scale-110 transition-all'>Home</Link>
         <Link to="/slot" className='hover:scale-110 transition-all'>Available Slot</Link>
         <Link to="/plans" className='hover:scale-110 transition-all'>Plans</Link>
         <Link to="/contact" className='hover:scale-110 transition-all'>Contact us</Link>
