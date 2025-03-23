@@ -6,8 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './CustomCard.css';
-import biharImg from '../../assets/golghar.png';
-import { Box, Link } from '@mui/material';
+import { Box, Link, Tooltip } from '@mui/material';
 import { IoStarHalf } from "react-icons/io5";
 
 const CustomCard = ({landmark}) => {
@@ -17,14 +16,17 @@ const CustomCard = ({landmark}) => {
       <CardMedia
         component="img"
         alt="green iguana"
-        height="200"
+        className='w-full h-52'
         image={landmark.image}
       />
       <CardContent>
       <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
         <Box>
         <Typography gutterBottom variant="h6" component="div">
-          {landmark.state}
+          {landmark.state.length<12?landmark.state:
+           <Tooltip title={landmark.state}>{landmark.state.substring(0,12)+".."}</Tooltip>
+            
+          }
         </Typography>
         </Box>
         <Box>
@@ -52,9 +54,8 @@ const CustomCard = ({landmark}) => {
       
        
       </CardContent>
-      <CardActions sx={{display:"flex",justifyContent:"end"
-}}>
-        <Button  sx={{fontWeight:"bold",fontSize:"25px"}}  size="small">Book Now</Button>
+      <CardActions sx={{display:"flex",justifyContent:"end"}}>
+        <Button sx={{fontWeight:"bold",fontSize:"25px"}}  size="small">Book Now</Button>
       </CardActions>
     </Card>
   );
