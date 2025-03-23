@@ -18,8 +18,8 @@ const Home = () => {
     <>
      
       <div className='min-h-screen p-4'>
-        <div className=''>
-          <img src={topBannerImg} alt="Top Banner" width={'50%'} height={'10%'} />
+        <div className='w-[80%] h-50'>
+          <img src={topBannerImg} alt="Top Banner" className='w-full h-full' />
 
         </div>
         <h1 className='text-center text-3xl font-bold mb-6'>India States</h1>
