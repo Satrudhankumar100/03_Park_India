@@ -5,6 +5,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer'
 import Signup from './components/SignUp/Signup'
 import { Route, Routes } from 'react-router-dom'
+import CustomerReview from './components/bookslot/CustomerReview'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,12 +17,13 @@ function App() {
               <Route path="/" element={<Home/>}/>
               <Route path="/signup" element={<Signup/>}/>
               <Route path="/login" element={<Login/>}/>
+             
               
-       
+            
             </Routes>
 
 
-
+        <CustomerReview/>
       <Footer />
     </>
   )
