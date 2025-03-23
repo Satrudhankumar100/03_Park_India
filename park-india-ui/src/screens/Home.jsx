@@ -4,6 +4,7 @@ import CustomCard from '../components/Card/CustomCard'
 
 import landmark from '../utils/Landmark'
 import topBannerImg from '../assets/parkingBanner.jpg'
+import CustomerReview from '../components/bookslot/CustomerReview'
 
 const Home = () => {
   const indianStates = [
@@ -16,7 +17,7 @@ const Home = () => {
 
   return (
     <>
-     
+
       <div className='min-h-screen p-4'>
         <div className='w-[80%] h-50'>
           <img src={topBannerImg} alt="Top Banner" className='w-full h-full' />
@@ -24,15 +25,16 @@ const Home = () => {
         </div>
         <h1 className='text-center text-3xl font-bold mb-6'>India States</h1>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {landmark.map((state, index) => (
-              <CustomCard key={index} landmark={state} />
-            ))}
-          </div>
-        
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {landmark.map((state, index) => (
+            <CustomCard key={index} landmark={state} />
+          ))}
+        </div>
+        <CustomerReview />
+
 
       </div>
-     
+
     </>
 
   )
