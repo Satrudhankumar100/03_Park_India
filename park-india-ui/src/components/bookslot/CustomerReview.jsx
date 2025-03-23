@@ -1,9 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
+import { EffectCards,Autoplay } from "swiper/modules";
 import "./CustomerReview.css"; // Fixed the import
 import "swiper/css"; // Added Swiper core CSS
 import "swiper/css/effect-cards"; // Ensures effect styling
+
 import CarLogo from "../../assets/CarLogo.jpg";
 
 const CustomerReview = () => {
@@ -13,8 +14,10 @@ const CustomerReview = () => {
       <Swiper
         effect={"cards"}
         grabCursor={true}
-        modules={[EffectCards]}
+        modules={[EffectCards,Autoplay]}
         className="mySwiper"
+        loop={true}
+        autoplay={{ delay: 1500, disableOnInteraction: false }} // Auto-swipe every 3s
       >
         <SwiperSlide>
             <div className="review-card">
