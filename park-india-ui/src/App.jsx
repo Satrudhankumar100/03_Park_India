@@ -6,13 +6,16 @@ import Footer from './components/Footer'
 import Signup from './components/SignUp/Signup'
 import { Route, Routes } from 'react-router-dom'
 import CustomerReview from './components/bookslot/CustomerReview'
+import ParkingSearch from './components/bookslot/ParkingSearch'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    
       <Header />
+      <ParkingSearch/>
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/signup" element={<Signup/>}/>
