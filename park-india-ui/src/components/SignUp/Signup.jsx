@@ -8,16 +8,16 @@ const Signup = () => {
         
         <form className='flex flex-col'>
           <label htmlFor="full-name">Full Name</label>
-          <input type="text" id="full-name" placeholder="Full Name" />
+          <input className="input"  type="text" id="full-name" placeholder="Full Name" />
 
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" placeholder="Email" />
+          <input className="input" type="email" id="email" placeholder="Email" />
 
           <label htmlFor="contact">Contact No.</label>
-          <input type="tel" id="contact" placeholder="Contact No." />
+          <input className="input" type="tel" id="contact" placeholder="Contact No." />
 
           <label htmlFor="address">Address</label>
-          <input type="text" id="address" placeholder="Enter your address" />
+          <input className="input" type="text" id="address" placeholder="Enter your address" />
 
           <button type="submit" className="submit-btn">
             Submit <i className="fas fa-paper-plane"></i>
