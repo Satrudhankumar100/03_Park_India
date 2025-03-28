@@ -1,8 +1,10 @@
 import React from 'react'
-//import './ParkingSearch.css';
+
 const ParkingSearch = () => {
+    
   return (
     <div className=' flex flex-col items-center justify-center p-4  w-full '>
+
         {/* ############## Search Bar #################### */}
         <div className="flex gap-2 bg-white p-2 rounded-2xl shadow-xl w-1/2 items-center ">
             <input className="flex flex-1/2 pl-6 outline-none" type="text" placeholder='e.g Bengaluru' />
@@ -33,6 +35,7 @@ const ParkingSearch = () => {
 
             </div>
         </div>
+        
     </div>
   )
 }

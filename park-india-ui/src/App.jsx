@@ -7,6 +7,8 @@ import Signup from './components/SignUp/Signup'
 import { Route, Routes } from 'react-router-dom'
 import CustomerReview from './components/bookslot/CustomerReview'
 import ParkingSearch from './components/bookslot/ParkingSearch'
+import RequestSlot from './components/bookslot/RequestSlot'
+import Contact from './screens/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,7 +22,9 @@ function App() {
               <Route path="/" element={<Home/>}/>
               <Route path="/signup" element={<Signup/>}/>
               <Route path="/login" element={<Login/>}/>
-              <Route path="/bookslot" element={<ParkingSearch/>}/>
+              {/* <Route path="/bookslot" element={<ParkingSearch/>}/> */}
+              <Route path="/bookslot" element={<RequestSlot/>}/>
+              <Route path="/contact" element={<Contact/>}/>
              
               
             
